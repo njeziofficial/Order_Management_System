@@ -1,0 +1,10 @@
+C:\Projects\OMS\OMS.DAL\bin\Debug\netcoreapp3.1\OMS.DAL.deps.json
+C:\Projects\OMS\OMS.DAL\bin\Debug\netcoreapp3.1\OMS.DAL.dll
+C:\Projects\OMS\OMS.DAL\bin\Debug\netcoreapp3.1\OMS.DAL.pdb
+C:\Projects\OMS\OMS.DAL\obj\Debug\netcoreapp3.1\OMS.DAL.csproj.AssemblyReference.cache
+C:\Projects\OMS\OMS.DAL\obj\Debug\netcoreapp3.1\OMS.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\OMS\OMS.DAL\obj\Debug\netcoreapp3.1\OMS.DAL.AssemblyInfoInputs.cache
+C:\Projects\OMS\OMS.DAL\obj\Debug\netcoreapp3.1\OMS.DAL.AssemblyInfo.cs
+C:\Projects\OMS\OMS.DAL\obj\Debug\netcoreapp3.1\OMS.DAL.csproj.CoreCompileInputs.cache
+C:\Projects\OMS\OMS.DAL\obj\Debug\netcoreapp3.1\OMS.DAL.dll
+C:\Projects\OMS\OMS.DAL\obj\Debug\netcoreapp3.1\OMS.DAL.pdb

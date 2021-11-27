@@ -1,0 +1,16 @@
+C:\Projects\OMS\OMS.Persistence\bin\Debug\netcoreapp3.1\OMS.Persistence.deps.json
+C:\Projects\OMS\OMS.Persistence\bin\Debug\netcoreapp3.1\OMS.Persistence.runtimeconfig.json
+C:\Projects\OMS\OMS.Persistence\bin\Debug\netcoreapp3.1\OMS.Persistence.runtimeconfig.dev.json
+C:\Projects\OMS\OMS.Persistence\bin\Debug\netcoreapp3.1\OMS.Persistence.dll
+C:\Projects\OMS\OMS.Persistence\bin\Debug\netcoreapp3.1\OMS.Persistence.pdb
+C:\Projects\OMS\OMS.Persistence\bin\Debug\netcoreapp3.1\OMS.DAL.dll
+C:\Projects\OMS\OMS.Persistence\bin\Debug\netcoreapp3.1\OMS.DAL.pdb
+C:\Projects\OMS\OMS.Persistence\obj\Debug\netcoreapp3.1\OMS.Persistence.csproj.AssemblyReference.cache
+C:\Projects\OMS\OMS.Persistence\obj\Debug\netcoreapp3.1\OMS.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\OMS\OMS.Persistence\obj\Debug\netcoreapp3.1\OMS.Persistence.AssemblyInfoInputs.cache
+C:\Projects\OMS\OMS.Persistence\obj\Debug\netcoreapp3.1\OMS.Persistence.AssemblyInfo.cs
+C:\Projects\OMS\OMS.Persistence\obj\Debug\netcoreapp3.1\OMS.Persistence.csproj.CoreCompileInputs.cache
+C:\Projects\OMS\OMS.Persistence\obj\Debug\netcoreapp3.1\OMS.Persistence.csproj.CopyComplete
+C:\Projects\OMS\OMS.Persistence\obj\Debug\netcoreapp3.1\OMS.Persistence.dll
+C:\Projects\OMS\OMS.Persistence\obj\Debug\netcoreapp3.1\OMS.Persistence.pdb
+C:\Projects\OMS\OMS.Persistence\obj\Debug\netcoreapp3.1\OMS.Persistence.genruntimeconfig.cache

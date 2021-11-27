@@ -1,0 +1,15 @@
+C:\Projects\OMS\OMS.BLL\bin\Debug\netcoreapp3.1\OMS.BLL.deps.json
+C:\Projects\OMS\OMS.BLL\bin\Debug\netcoreapp3.1\OMS.BLL.dll
+C:\Projects\OMS\OMS.BLL\bin\Debug\netcoreapp3.1\OMS.BLL.pdb
+C:\Projects\OMS\OMS.BLL\bin\Debug\netcoreapp3.1\OMS.DAL.dll
+C:\Projects\OMS\OMS.BLL\bin\Debug\netcoreapp3.1\OMS.Persistence.dll
+C:\Projects\OMS\OMS.BLL\bin\Debug\netcoreapp3.1\OMS.Persistence.pdb
+C:\Projects\OMS\OMS.BLL\bin\Debug\netcoreapp3.1\OMS.DAL.pdb
+C:\Projects\OMS\OMS.BLL\obj\Debug\netcoreapp3.1\OMS.BLL.csproj.AssemblyReference.cache
+C:\Projects\OMS\OMS.BLL\obj\Debug\netcoreapp3.1\OMS.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\OMS\OMS.BLL\obj\Debug\netcoreapp3.1\OMS.BLL.AssemblyInfoInputs.cache
+C:\Projects\OMS\OMS.BLL\obj\Debug\netcoreapp3.1\OMS.BLL.AssemblyInfo.cs
+C:\Projects\OMS\OMS.BLL\obj\Debug\netcoreapp3.1\OMS.BLL.csproj.CoreCompileInputs.cache
+C:\Projects\OMS\OMS.BLL\obj\Debug\netcoreapp3.1\OMS.BLL.csproj.CopyComplete
+C:\Projects\OMS\OMS.BLL\obj\Debug\netcoreapp3.1\OMS.BLL.dll
+C:\Projects\OMS\OMS.BLL\obj\Debug\netcoreapp3.1\OMS.BLL.pdb
