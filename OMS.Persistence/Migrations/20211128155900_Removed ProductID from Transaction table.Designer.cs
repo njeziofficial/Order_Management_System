@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OMS.Persistence;
 
 namespace OMS.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211128155900_Removed ProductID from Transaction table")]
+    partial class RemovedProductIDfromTransactiontable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -221,9 +223,6 @@ namespace OMS.Persistence.Migrations
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int");
 
-                    b.Property<int>("OrderID")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("money");
 
@@ -241,8 +240,6 @@ namespace OMS.Persistence.Migrations
                     b.HasIndex("CustomerId");
 
                     b.HasIndex("EmployeeId");
-
-                    b.HasIndex("OrderID");
 
                     b.HasIndex("ProductId");
 
@@ -319,12 +316,6 @@ namespace OMS.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("OMS.DAL.Models.Order", "Order")
-                        .WithMany()
-                        .HasForeignKey("OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("OMS.DAL.Models.Product", null)
                         .WithMany("Transactions")
                         .HasForeignKey("ProductId");
@@ -332,8 +323,6 @@ namespace OMS.Persistence.Migrations
                     b.Navigation("Customer");
 
                     b.Navigation("Employee");
-
-                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("OMS.DAL.Models.Customer", b =>

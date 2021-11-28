@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OMS.Persistence;
 
 namespace OMS.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211128153901_Removed ProductId")]
+    partial class RemovedProductId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -221,7 +223,7 @@ namespace OMS.Persistence.Migrations
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int");
 
-                    b.Property<int>("OrderID")
+                    b.Property<int?>("OrderID")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Price")
@@ -235,6 +237,9 @@ namespace OMS.Persistence.Migrations
 
                     b.Property<decimal>("TotalPrice")
                         .HasColumnType("money");
+
+                    b.Property<int>("TransactionStatus")
+                        .HasColumnType("int");
 
                     b.HasKey("TransactionId");
 
@@ -321,9 +326,7 @@ namespace OMS.Persistence.Migrations
 
                     b.HasOne("OMS.DAL.Models.Order", "Order")
                         .WithMany()
-                        .HasForeignKey("OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("OrderID");
 
                     b.HasOne("OMS.DAL.Models.Product", null)
                         .WithMany("Transactions")

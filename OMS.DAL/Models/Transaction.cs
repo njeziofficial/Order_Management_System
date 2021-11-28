@@ -13,9 +13,9 @@ namespace OMS.DAL.Models
         [ForeignKey("Customer")]
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
-        [ForeignKey("Product")]
-        public int ProductId { get; set; }
-        public Product Product { get; set; }
+        [ForeignKey("Order")]
+        public int OrderID { get; set; }
+        public Order Order { get; set; }
         [Column(TypeName = "money")]
         public double Price { get; set; }
         public int Quantity { get; set; }

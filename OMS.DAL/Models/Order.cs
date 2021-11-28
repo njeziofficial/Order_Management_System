@@ -19,5 +19,6 @@ namespace OMS.DAL.Models
         public int TotalProduct { get; set; }
         public double TotalPrice { get; set; }
         public int OrderStatus { get; set; }
+        public List<Product> Products { get; set; }
     }
 }
