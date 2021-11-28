@@ -10,7 +10,8 @@ namespace OMS.Persistence
     {
         IProductRepository Products { get; }
         IOrderRepository Orders { get; }
-        public ICustomerRepository Customers { get; }
+        ICustomerRepository Customers { get; }
+        IOrderProductRepository OrderProducts { get; }
 
         Task<int> CompleteAsync();
     }

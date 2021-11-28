@@ -44,7 +44,7 @@ namespace OMS.API.Services.Concrete
             return status;
         }
 
-        public async Task<Tuple<ProductVM, bool>>AddProduct(ProductVM productVM)
+        public async Task<Tuple<ProductVM, bool>> AddProduct(ProductVM productVM)
         {
             bool isSuccess = false;
             var product = mapper.Map<Product>(productVM);
@@ -53,8 +53,16 @@ namespace OMS.API.Services.Concrete
             {
                 productVM = mapper.Map(product, productVM);
 
-                isSuccess = productVM.ProductId > 0;                
+                isSuccess = productVM.ProductId > 0;
             }
+            return Tuple.Create(productVM, isSuccess);
+        }
+
+        public async Task<Tuple<List<ProductVM>, bool>> AddProducts(List<ProductVM> productVM)
+        {
+            bool isSuccess = false;
+            var products = productVM.Select(product => mapper.Map<Product>(product)).ToList();
+            isSuccess = await unitOfWork.Products.AddRange(products);
             return Tuple.Create(productVM, isSuccess);
         }
     }

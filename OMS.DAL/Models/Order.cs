@@ -14,7 +14,6 @@ namespace OMS.DAL.Models
         [MaxLength(11)]
         [ForeignKey("Customer")]
         public int PlacedBy { get; set; }
-        //[NotMapped]
         public Customer Customer { get; set; }
         public DateTime DateCreated { get; set; }
         public int TotalProduct { get; set; }

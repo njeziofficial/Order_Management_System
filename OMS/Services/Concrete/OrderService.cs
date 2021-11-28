@@ -14,18 +14,26 @@ namespace OMS.API.Services.Concrete
     {
         private readonly IUnitOfWork unitOfWork;
         private readonly IMapper mapper;
-        private readonly IOrder_BLL order_BLL;
 
-        public OrderService(IUnitOfWork unitOfWork, IMapper mapper, IOrder_BLL order_BLL)
+        public OrderService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             this.unitOfWork = unitOfWork;
             this.mapper = mapper;
-            this.order_BLL = order_BLL;
         }
-        //public async Task<Tuple<OrderVM, bool, string>>PlaceOrder(OrderVM orderVM)
-        //{
-        //    var order = mapper.Map<Order>(orderVM);
-        //    var response = await order_BLL.PlaceOrder(order);
-        //}
+        public async Task<Tuple<bool, string>> PlaceOrder(OrderVM orderVM)
+        {
+            var order = mapper.Map<Order>(orderVM);
+            order = await unitOfWork.Orders.Add(order);
+            var order_product = orderVM.Products.Select(x => new OrderProduct
+            {
+                OrderID = order.OrderID,
+                ProductID = x.ProductId
+            }).ToArray();
+            bool isSuccess = await unitOfWork.OrderProducts.AddRange(order_product);
+            string message = "Error in Placing Order.";
+            if (isSuccess)
+                message = "Order placed successfully.";
+            return Tuple.Create(isSuccess, message);
+        }
     }
 }

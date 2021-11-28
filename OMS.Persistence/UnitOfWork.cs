@@ -16,11 +16,13 @@ namespace OMS.Persistence
             Products = new ProductRepository(_context);
             Orders = new OrderRepository(_context);
             Customers = new CustomerRepository(_context);
+            OrderProducts = new OrderProductRepository(_context);
 
         }
         public IProductRepository Products { get; }
         public IOrderRepository Orders { get; }
         public ICustomerRepository Customers { get; }
+        public IOrderProductRepository OrderProducts { get; }
 
         public async Task<int> CompleteAsync() => await _context.SaveChangesAsync();
 

@@ -13,5 +13,6 @@ namespace OMS.API.Services.Abstract
         Task<ProductVM> GetProductByID(int Id);
         Task<bool> UpdateProduct(ProductVM productVM);
         Task<Tuple<ProductVM, bool>> AddProduct(ProductVM productVM);
+        Task<Tuple<List<ProductVM>, bool>> AddProducts(List<ProductVM> productVM);
     }
 }

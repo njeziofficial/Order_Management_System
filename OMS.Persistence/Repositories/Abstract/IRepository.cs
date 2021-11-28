@@ -12,7 +12,7 @@ namespace OMS.Persistence.Repositories.Abstract
         Task<IEnumerable<TEntity>> GetAll();
         Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate);
         Task<TEntity> Add(TEntity entity);
-        Task AddRange(IEnumerable<TEntity> entities);
+        Task<bool> AddRange(IEnumerable<TEntity> entities);
         Task Remove(TEntity entity);
         Task RemoveRange(IEnumerable<TEntity> entities);
     }

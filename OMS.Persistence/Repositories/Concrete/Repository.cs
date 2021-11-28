@@ -28,7 +28,12 @@ namespace OMS.Persistence.Repositories.Concrete
             await Context.SaveChangesAsync();
             return entity;
         }
-        public async Task AddRange(IEnumerable<TEntity> entities) => await Context.Set<TEntity>().AddRangeAsync(entities);
+        public async Task<bool> AddRange(IEnumerable<TEntity> entities)
+        {
+            await Context.Set<TEntity>().AddRangeAsync(entities);
+           bool isSuccess = (await Context.SaveChangesAsync()) > 0;
+            return isSuccess;
+        }
         public async Task Remove(TEntity entity) => Context.Set<TEntity>().Remove(entity);
         public async Task RemoveRange(IEnumerable<TEntity> entities) => Context.Set<TEntity>().RemoveRange(entities);
     }

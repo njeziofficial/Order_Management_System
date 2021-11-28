@@ -46,7 +46,7 @@ namespace OMS.API.Controllers
         }
 
         [HttpPost("AddProduct")]
-        public async Task<IActionResult>AddProduct([FromBody] ProductVM productVM)
+        public async Task<IActionResult> AddProduct([FromBody] ProductVM productVM)
         {
             if (ModelState.IsValid)
             {
@@ -54,9 +54,20 @@ namespace OMS.API.Controllers
                 productVM = serviceResponse.Item1;
                 bool isSuccess = serviceResponse.Item2;
                 if (isSuccess)
-                    return Ok(Tuple.Create(productVM, "Product Added Successfully."));                
+                    return Ok(Tuple.Create(productVM, "Product Added Successfully."));
             }
             return BadRequest(productVM);
+        }
+
+        [HttpPost("AddProducts")]
+        public async Task<IActionResult> AddProducts(List<ProductVM> products)
+        {
+            var serviceResponse = await productService.AddProducts(products);
+            products = serviceResponse.Item1;
+            bool isSuccess = serviceResponse.Item2;
+            if (isSuccess)
+                return Ok(Tuple.Create(products, "Products added successfully."));
+            return BadRequest("Error in adding Products.");
         }
     }
 }

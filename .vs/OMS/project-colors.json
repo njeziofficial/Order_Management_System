@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "86e322f0-e898-4f9d-8a97-f2581a6ac646": {
+      "ProjectGuid": "86e322f0-e898-4f9d-8a97-f2581a6ac646",
+      "DisplayName": "OMS.API",
+      "ColorIndex": 0
+    },
+    "1099ae08-fa85-4d9b-a059-311d03c85c25": {
+      "ProjectGuid": "1099ae08-fa85-4d9b-a059-311d03c85c25",
+      "DisplayName": "OMS.Persistence",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

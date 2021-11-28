@@ -22,7 +22,7 @@ namespace OMS.API.Controllers
 
         /*
         [HttpGet]
-        public async Task<IActionResult>PlaceOrder(OrderVM orderVM)
+        public async Task<IActionResult> PlaceOrder(OrderVM orderVM)
         {
             if (ModelState.IsValid)
             {

@@ -17,10 +17,7 @@ namespace OMS.DAL.Models
         public string Flavours { get; set; }
         [Column(TypeName = "money")]
         public double Price { get; set; }
-        //[NotMapped]
         public IEnumerable<Transaction> Transactions { get; set; }
-        //[NotMapped]
         public IEnumerable<Pending> Pendings { get; set; }
-
     }
 }

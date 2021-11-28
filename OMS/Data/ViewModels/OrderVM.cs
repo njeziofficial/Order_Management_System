@@ -9,9 +9,11 @@ namespace OMS.API.Data.ViewModels
     public class OrderVM
     {
         public int OrderID { get; set; }
-
         public int PlacedBy { get; set; }
         public DateTime DateCreated { get; set; }
         public IEnumerable<ProductVM> Products { get; set; }
+        public int TotalProduct { get; set; }
+        public double TotalPrice { get; set; }
+        public int OrderStatus { get; set; }
     }
 }
